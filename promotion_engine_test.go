@@ -4,11 +4,18 @@ import (
 	"testing"
 )
 
+var price_table = map[string]int{
+	"A": 50,
+	"B": 30,
+	"C": 20,
+	"D": 15,
+}
+
 func TestScenarioA(t *testing.T) {
 	order := []string{"A", "B", "C"}
 	expected_total := 100
 
-	total, _ := GetTotal(order)
+	total, _ := GetTotal(nil, nil, order)
 
 	if total != expected_total {
 		t.Fatalf("Wrong total. Expected: %d, got: %d", expected_total, total)
@@ -22,7 +29,7 @@ func TestScenarioB(t *testing.T) {
 	}
 	expected_total := 370
 
-	total, _ := GetTotal(order)
+	total, _ := GetTotal(nil, nil, order)
 
 	if total != expected_total {
 		t.Fatalf("Wrong total. Expected: %d, got: %d", expected_total, total)
@@ -37,7 +44,29 @@ func TestScenarioC(t *testing.T) {
 	}
 	expected_total := 280
 
-	total, _ := GetTotal(order)
+	total, _ := GetTotal(nil, nil, order)
+
+	if total != expected_total {
+		t.Fatalf("Wrong total. Expected: %d, got: %d", expected_total, total)
+	}
+}
+
+func TestNoPromotions(t *testing.T) {
+	order := []string{"A", "B", "C", "D"}
+	expected_total := 115
+
+	total, _ := GetTotal(price_table, nil, order)
+
+	if total != expected_total {
+		t.Fatalf("Wrong total. Expected: %d, got: %d", expected_total, total)
+	}
+}
+
+func TestEmptyCart(t *testing.T) {
+	order := []string{}
+	expected_total := 0
+
+	total, _ := GetTotal(price_table, nil, order)
 
 	if total != expected_total {
 		t.Fatalf("Wrong total. Expected: %d, got: %d", expected_total, total)
