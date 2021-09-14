@@ -1,9 +1,5 @@
 package promotion_engine
 
-import (
-	"errors"
-)
-
 type Promotion interface {
 	IsApplicable(items []string) bool
 	Apply(items []string) ([]string, int)
@@ -29,5 +25,12 @@ func GetTotal(price_table map[string]int, promotions []Promotion, items []string
 			return sub_total + promo_total, nil
 		}
 	}
-	return 0, errors.New("not implemented")
+
+	// If we reached here, there are no applicable promotions
+	// Sum up the rest of the items and return
+	total := 0
+	for i := 0; i < len(items); i++ {
+		total += price_table[items[i]]
+	}
+	return total, nil
 }
