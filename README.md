@@ -1,4 +1,6 @@
 # Coding test: Promotion Engine
+![Tests](https://github.com/CodeEsterT/CodingTest/actions/workflows/go.yml/badge.svg)
+
 This repository contains the code for the promotion engine coding test.
 
 ## Description
@@ -10,6 +12,7 @@ It also contains the `GetTotal()` function, which recursively calculates the tot
 
 
 ## Running the tests
+This project is tested using GitHub actions, but it can also run locally.
 With Go installed on the system, the tests can be run by executing:
 ```
 $ go test -v
