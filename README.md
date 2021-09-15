@@ -18,6 +18,6 @@ $ go test -v
 ## Author
 Jan Meznik
 
-@JanmanX
+[@JanmanX](https://github.com/JanmanX)
 
 jan@meznik.dk
