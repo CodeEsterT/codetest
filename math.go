@@ -23,6 +23,23 @@ func IsSubset(a []string, s []string) bool {
 	return true
 }
 
-func RemoveSubset(a []string, s []string) []string {
-	return nil
+func SubtractSlices(a []string, s []string) []string {
+	a_dict := make(map[string]int)
+	for _, v := range a {
+		a_dict[v] += 1
+	}
+
+	for _, v := range s {
+		a_dict[v] -= 1
+	}
+
+	result := []string{}
+
+	for key, value := range a_dict {
+		for i := 0; i < value; i++ {
+			result = append(result, key)
+		}
+	}
+
+	return result
 }
