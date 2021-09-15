@@ -12,19 +12,19 @@ var price_table = map[string]int{
 }
 
 var active_promotions = []PromotionApplier{
-	BulkPromotion{
+	CombinedPromotion{
 		Promotion{
 			Price: 130,
 			SKUs:  []string{"A", "A", "A"},
 		},
 	},
-	BulkPromotion{
+	CombinedPromotion{
 		Promotion{
 			Price: 45,
 			SKUs:  []string{"B", "B"},
 		},
 	},
-	BulkPromotion{
+	CombinedPromotion{
 		Promotion{
 			Price: 30,
 			SKUs:  []string{"C", "D"},
@@ -76,7 +76,7 @@ func TestNoPromotions(t *testing.T) {
 	order := []string{"A", "B", "C"}
 	expected_total := 100
 
-	total, _ := GetTotal(price_table, active_promotions, order)
+	total, _ := GetTotal(price_table, nil, order)
 
 	if total != expected_total {
 		t.Fatalf("Wrong total. Expected: %d, got: %d", expected_total, total)

@@ -2,6 +2,7 @@ package promotion_engine
 
 import (
 	"reflect"
+	"sort"
 	"testing"
 )
 
@@ -69,6 +70,8 @@ func TestSubtractSlices(t *testing.T) {
 	expected := []string{"A", "B"}
 
 	subtracted := SubtractSlices(a, s)
+	sort.Strings(subtracted)
+
 	if !reflect.DeepEqual(subtracted, expected) {
 		t.Fatalf("Subtracted set is not what is expected.")
 	}
@@ -89,7 +92,9 @@ func TestSubtractSlices(t *testing.T) {
 	expected = []string{"A", "C", "C"}
 
 	subtracted = SubtractSlices(a, s)
+	sort.Strings(subtracted)
 	if !reflect.DeepEqual(subtracted, expected) {
+		t.Fatal(subtracted)
 		t.Fatalf("Subtracted set is not what is expected.")
 	}
 
