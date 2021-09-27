@@ -1,0 +1,16 @@
+/home/jan/src/CodingTest/csharp/bin/Debug/net5.0/csharp
+/home/jan/src/CodingTest/csharp/bin/Debug/net5.0/csharp.deps.json
+/home/jan/src/CodingTest/csharp/bin/Debug/net5.0/csharp.runtimeconfig.json
+/home/jan/src/CodingTest/csharp/bin/Debug/net5.0/csharp.runtimeconfig.dev.json
+/home/jan/src/CodingTest/csharp/bin/Debug/net5.0/csharp.dll
+/home/jan/src/CodingTest/csharp/bin/Debug/net5.0/ref/csharp.dll
+/home/jan/src/CodingTest/csharp/bin/Debug/net5.0/csharp.pdb
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/csharp.csprojAssemblyReference.cache
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/csharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/csharp.AssemblyInfoInputs.cache
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/csharp.AssemblyInfo.cs
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/csharp.csproj.CoreCompileInputs.cache
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/csharp.dll
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/ref/csharp.dll
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/csharp.pdb
+/home/jan/src/CodingTest/csharp/obj/Debug/net5.0/csharp.genruntimeconfig.cache
