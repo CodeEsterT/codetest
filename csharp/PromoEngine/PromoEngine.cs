@@ -14,6 +14,12 @@ namespace PromoEngine
         List<string> requirements;
         double price;
 
+        public BulkPromotion(List<string> requirements, double price)
+        {
+            this.requirements = requirements;
+            this.price = price;
+        }
+
         public bool IsApplicable(List<string> items)
         {
             return false;
