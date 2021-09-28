@@ -63,12 +63,11 @@ namespace PromoEngine.Tests
                                         );
             Assert.Equal(default_prices["A"] * 2 + default_prices["B"] + default_prices["C"], price);
 
-            // Unknown items
-            price = promoEngine.CalculatePrice(new List<IPromotion>(),
+            // Unknown items should throw exception
+            Assert.Throws<KeyNotFoundException>(() => promoEngine.CalculatePrice(new List<IPromotion>(),
                                         this.default_prices,
                                         new List<string>() {"C", "Z"}
-                                        );
-            Assert.Equal(default_prices["C"], price);
+                                        ));
         }
 
 
