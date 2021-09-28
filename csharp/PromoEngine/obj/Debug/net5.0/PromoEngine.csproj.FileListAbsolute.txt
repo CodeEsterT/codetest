@@ -1,0 +1,12 @@
+/home/jan/src/CodingTest/csharp/PromoEngine/obj/Debug/net5.0/PromoEngine.csprojAssemblyReference.cache
+/home/jan/src/CodingTest/csharp/PromoEngine/obj/Debug/net5.0/PromoEngine.GeneratedMSBuildEditorConfig.editorconfig
+/home/jan/src/CodingTest/csharp/PromoEngine/obj/Debug/net5.0/PromoEngine.AssemblyInfoInputs.cache
+/home/jan/src/CodingTest/csharp/PromoEngine/obj/Debug/net5.0/PromoEngine.AssemblyInfo.cs
+/home/jan/src/CodingTest/csharp/PromoEngine/obj/Debug/net5.0/PromoEngine.csproj.CoreCompileInputs.cache
+/home/jan/src/CodingTest/csharp/PromoEngine/bin/Debug/net5.0/PromoEngine.deps.json
+/home/jan/src/CodingTest/csharp/PromoEngine/bin/Debug/net5.0/PromoEngine.dll
+/home/jan/src/CodingTest/csharp/PromoEngine/bin/Debug/net5.0/ref/PromoEngine.dll
+/home/jan/src/CodingTest/csharp/PromoEngine/bin/Debug/net5.0/PromoEngine.pdb
+/home/jan/src/CodingTest/csharp/PromoEngine/obj/Debug/net5.0/PromoEngine.dll
+/home/jan/src/CodingTest/csharp/PromoEngine/obj/Debug/net5.0/ref/PromoEngine.dll
+/home/jan/src/CodingTest/csharp/PromoEngine/obj/Debug/net5.0/PromoEngine.pdb
