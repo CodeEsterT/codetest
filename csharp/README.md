@@ -1,5 +1,5 @@
 # Coding test: Promotion Engine
-![Tests](https://github.com/CodeEsterT/CodingTest/actions/workflows/dotnet.yml/badge.svg)
+![Tests](https://github.com/CodeEsterT/codetest/actions/workflows/dotnet.yml/badge.svg)
 
 This repository contains the code for the promotion engine coding test.
 
