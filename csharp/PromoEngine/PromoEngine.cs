@@ -22,15 +22,35 @@ namespace PromoEngine
 
         public bool IsApplicable(List<string> items)
         {
-            return false;
+            List<string> item_check = new List<string>(items); 
+
+            foreach(string item in requirements)
+            {
+                if(item_check.Contains(item)) {
+                    item_check.Remove(item);
+                } else {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public Tuple<List<string>, double> Apply(List<string> cart)
         {
-            var ret = new Tuple<List<string>, double>(
-                cart, 0
+            List<string> new_cart = new List<string>(cart); 
+ 
+            foreach(string item in requirements)
+            {
+                if(new_cart.Remove(item) == false)
+                {
+                    throw new KeyNotFoundException($"Cart does not contain promotion item: {item}");
+                }
+            }            
+
+            return new Tuple<List<string>, double>(
+                new_cart, price
             );
-            return ret;  
         }
 
         public override string ToString()
@@ -52,7 +72,6 @@ namespace PromoEngine
             {
                 if(promotion.IsApplicable(cart))
                 {
-                    Console.WriteLine($"Promotion applicable: {promotion}");
                     (List<string> new_cart, double sub_total) = promotion.Apply(cart);
                     return sub_total + CalculatePrice(promotions, prices, new_cart);
                 }
